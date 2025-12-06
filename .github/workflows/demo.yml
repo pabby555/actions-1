@@ -31,4 +31,4 @@ jobs:
         # Runs a set of commands
       - name: Read files
         run: cat README.md
-        run: |ls
+        
