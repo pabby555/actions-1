@@ -16,16 +16,15 @@ jobs:
           path: hello.txt
 
   test:
-     runs-on: ubuntu-latest
      needs: build
-
+     runs-on: ubuntu-latest
      steps:
       - uses: actions/download-artifact@v5
          with:
           name: hello-file
       - name: List file
-        run: ls
+        run: ls -R
 
       - name: Test file
-        run: cat hello.txt | grep -i "Hello, world!"  
+        run: cat hello-file/hello.txt | grep -i "Hello, world!"  
   
