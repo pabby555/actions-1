@@ -20,7 +20,7 @@ jobs:
      runs-on: ubuntu-latest
      steps:
       - uses: actions/download-artifact@v5
-         with:
+        with:
           name: hello-file
       - name: List file
         run: ls -R
