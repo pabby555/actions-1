@@ -22,9 +22,10 @@ jobs:
       - uses: actions/download-artifact@v5
         with:
           name: hello-file
+          path: .
       - name: List file
         run: ls -R
 
       - name: Test file
-        run: cat hello-file/hello.txt | grep -i "Hello, world!"  
+        run: cat hello.txt | grep -i "Hello, world!"  
   
